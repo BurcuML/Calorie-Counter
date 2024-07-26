@@ -48,8 +48,8 @@ legend {
 button {
   cursor: pointer;
   text-decoration: none;
-  background-color: var(--light-yellow);
-  border: 2px solid var(--dark-yellow);
+  background-color: var(--light-grey);
+  border: 3px solid var(--dark-yellow);
 }
 
 button,
@@ -57,6 +57,7 @@ input,
 select {
   min-height: 24px;
   color: var(--dark-blue);
+  border-radius: 7px;
 }
 
 fieldset,
@@ -68,7 +69,6 @@ select {
 }
 
 .output {
-  border: 2px solid var(--light-grey);
   padding: 10px;
   text-align: center;
 }
@@ -83,9 +83,15 @@ select {
 }
 
 .surplus {
-  color: var(--light-pink);
+  color: var(--fcc-blue);
 }
 
 .deficit {
-  color: var(--light-green);
+  color: var(--dark-blue);
+}
+fieldset{
+  margin-top: 20px;
+  color: #0d0d29;
+  border-right: none;
+  border-left: none;
 }
