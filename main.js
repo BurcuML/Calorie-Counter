@@ -6,11 +6,20 @@ const clearButton = document.getElementById('clear');
 const output = document.getElementById('output');
 let isError = false;
 
-function cleanInputString(str) {
+/*Bu kod, verilen bir string'deki (str) "+" (artı), "-" (eksi) ve boşluk karakterlerini temizleyerek (kaldırarak) yeni bir string döndürüyor. 
+Düzenli ifade (regex) kullanarak bu karakterleri buluyor ve .replace() metodu ile bunları boş string ile değiştiriyor.*/
+function cleanInputString(str) { 
   const regex = /[+-\s]/g;
   return str.replace(regex, '');
 }
 
+/*
+Bu kod, verilen bir string'in (str) içinde bilimsel notasyon formatında bir sayı (örneğin "1e10", "2.5e-5") olup olmadığını kontrol ediyor.
+"\d+": Bir veya daha fazla rakam (0-9) anlamına gelir.
+"e": Küçük veya büyük 'e' harfi (bilimsel notasyonun göstergesi).
+"\d+": Yine, bir veya daha fazla rakam.
+"/i": Bu bayrak (flag) düzenli ifadenin büyük/küçük harf duyarsız (case-insensitive) olmasını sağlar. Yani "e" yerine "E" de olabilir.
+*/
 function isInvalidInput(str) {
   const regex = /\d+e\d+/i;
   return str.match(regex);
