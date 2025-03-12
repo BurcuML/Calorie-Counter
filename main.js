@@ -42,7 +42,12 @@ function addEntry() {
 }
 
 function calculateCalories(e) {
-  e.preventDefault();
+  e.preventDefault(); // JavaScript'te bir olay nesnesi (event object) üzerinde çağrılan bir metottur ve tarayıcının varsayılan davranışını engellemek için kullanılır.
+/*
+Örneğin:
+Form gönderme: Bir <form> elemanının varsayılan davranışı, verileri sunucuya göndermek ve sayfayı yenilemektir. 
+e.preventDefault() kullanarak bu davranışı engelleyebilir ve veriyi JavaScript ile (örneğin AJAX kullanarak) gönderebilirsiniz.*/
+  
   isError = false;
 
   const breakfastNumberInputs = document.querySelectorAll('#breakfast input[type=number]');
